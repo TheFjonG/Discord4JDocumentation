@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Discord4J &mdash; Discord4J 1 documentation</title>
+  <title>Getting Started &mdash; Discord4J 1 documentation</title>
   
 
   
@@ -30,8 +30,7 @@
   
 
   
-    <link rel="top" title="Discord4J 1 documentation" href="#"/>
-        <link rel="next" title="Getting Started" href="getting_started.html"/> 
+    <link rel="top" title="Discord4J 1 documentation" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -49,7 +48,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> Discord4J
+            <a href="index.html" class="icon icon-home"> Discord4J
           
 
           
@@ -80,8 +79,7 @@
           
             
             
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+                <ul class="simple">
 </ul>
 
             
@@ -95,7 +93,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="#">Discord4J</a>
+        <a href="index.html">Discord4J</a>
       </nav>
 
 
@@ -110,13 +108,13 @@
 
 <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="#">Docs</a> &raquo;</li>
+    <li><a href="index.html">Docs</a> &raquo;</li>
       
-    <li>Discord4J</li>
+    <li>Getting Started</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/index.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/Getting Started.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -126,32 +124,33 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="discord4j">
-<h1>Discord4J<a class="headerlink" href="#discord4j" title="Permalink to this headline">¶</a></h1>
-<p>Discord4J is an unofficial Java library that helps you access <a class="reference external" href="https://discordapp.com">Discord&#8217;s</a> API through REST and WebSockets.</p>
-<p>Discord4J makes it easy for you to write a bot. It nearly has full api support.
-(See <a class="reference external" href="https://discordapi.com/unofficial/comparison.html">Discord API Comparison</a>)</p>
-<p>The sourcecode can be found on <a class="reference external" href="https://github.com/austinv11/Discord4J">Github</a>.
-Feel free to join us in the <a class="reference external" href="https://discord.gg/0SBTUU1wZTX5pYo1">Discord API chat</a>.</p>
+  <div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>Discord.Net currently requires logging in with a claimed account - anonymous logins are not supported. You can <a class="reference external" href="https://discordapp.com/register">register for a Discord account here</a>.</p>
+<p>New accounts are also useless when not connected to a server, so you should create an invite code for whatever server you intend to test on using the official Discord client.</p>
 </div>
-<div class="section" id="important">
-<h1>Important<a class="headerlink" href="#important" title="Permalink to this headline">¶</a></h1>
-<p>It&#8217;s recommended that you always use the latest version available. You can find the latest version in the
-<a class="reference external" href="https://discord.gg/0SBTUU1wZTX5pYo1">Discord Chat</a> &amp; on <a class="reference external" href="http://austinv11.github.io/Discord4J/">Discord4J&#8217;s Github page</a></p>
-<p>Please report any bugs you find to the <a class="reference external" href="https://github.com/austinv11/Discord4J/issues">Issue Tracker</a> or to our <a class="reference external" href="https://discord.gg/0SBTUU1wZTX5pYo1">Discord Chat</a></p>
-<p>This Documentation is still under development. If this site cant help you, please use the <a class="reference external" href="https://discord.gg/0SBTUU1wZTX5pYo1">Discord Chat</a></p>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>You can get Discord.Net from NuGet:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.nuget.org/packages/Discord.Net">Discord.Net</a></li>
+<li><a class="reference external" href="https://www.nuget.org/packages/Discord.Net.Commands">Discord.Net.Commands</a></li>
+<li><a href="#id2"><span class="problematic" id="id3">`Discord.Net.Modules`_</span></a></li>
+<li><a href="#id4"><span class="problematic" id="id5">`Discord.Net.Audio`_</span></a></li>
+</ul>
+<p>If you have trouble installing from NuGet, try installing dependencies manually.</p>
+<p>You can also pull the latest source from <a class="reference external" href="https://github.com/RogueException/Discord.Net/">GitHub</a></p>
 </div>
-<div class="section" id="documentation">
-<h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="getting_started.html#requirements">Requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="getting_started.html#making-a-bot-account">Making a bot account</a></li>
-<li class="toctree-l2"><a class="reference internal" href="getting_started.html#installation">Installation</a></li>
-</ul>
-</li>
-</ul>
+<div class="section" id="async">
+<h2>Async<a class="headerlink" href="#async" title="Permalink to this headline">¶</a></h2>
+<p>Discord.Net uses C# tasks extensively - nearly all operations return one. It is highly recommended that these tasks be awaited whenever possible.
+To do so requires the calling method be marked as async, which can be problematic in a console application. An example of how to get around this is provided below.</p>
+<p>For more information, go to <a class="reference external" href="https://msdn.microsoft.com/en-us/library/hh191443.aspx">MSDN&#8217;s Await-Async section</a>.</p>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -159,13 +158,6 @@ Feel free to join us in the <a class="reference external" href="https://discord.
            </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="getting_started.html" class="btn btn-neutral float-right" title="Getting Started" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-    </div>
   
 
   <hr/>

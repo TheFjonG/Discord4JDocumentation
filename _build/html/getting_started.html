@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting Started &mdash; Discord4J 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Discord4J 1 documentation" href="index.html"/>
+        <link rel="prev" title="Discord4J" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Discord4J
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#making-a-bot-account">Making a bot account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Discord4J</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/getting_started.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>Discord4J requires you to have a registered Account or a bot account.
+You can <a class="reference external" href="https://discordapp.com/register">register an account here</a>.</p>
+<p>It is highly recommended that you make a bot account for your application.</p>
+</div>
+<div class="section" id="making-a-bot-account">
+<h2>Making a bot account<a class="headerlink" href="#making-a-bot-account" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Install Curl from <a class="reference external" href="https://curl.haxx.se/download.html">Curl&#8217;s website</a></li>
+<li>You will need 2 accounts. 1 Main Account &amp; 1 Bot Account.</li>
+</ul>
+<p>&#8220;YOUR..&#8221; Is your Main account&#8217;s information.
+&#8220;YOUR BOTS...&#8221; Is your Bot&#8217;s Information.</p>
+<p>Now you want to make an application.
+Run this via CMD or Terminal:</p>
+<div class="highlight-Bash"><div class="highlight"><pre><span></span>curl -H <span class="s1">&#39;Authorization: [YOUR TOKEN]&#39;</span> <span class="se">\</span>
+-H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="se">\</span>
+-X POST -d <span class="s1">&#39;{&quot;name&quot;: &quot;[YOUR BOTS USERS TOKEN]&quot;}&#39;</span> <span class="se">\</span>
+https://discordapp.com/api/oauth2/applications
+</pre></div>
+</div>
+<p>You should get a response like this:</p>
+<div class="highlight-Bash"><div class="highlight"><pre><span></span><span class="o">{</span><span class="s2">&quot;secret&quot;</span>: <span class="s2">&quot;XXX&quot;</span>, <span class="s2">&quot;redirect_uris&quot;</span>: <span class="o">[]</span>, <span class="s2">&quot;description&quot;</span>: <span class="s2">&quot;&quot;</span>, <span class="s2">&quot;name&quot;</span>: <span class="s2">&quot;YOUR BOTS NAME HERE&quot;</span>, <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;YYY&quot;</span>, <span class="s2">&quot;icon&quot;</span>: null<span class="o">}</span>
+</pre></div>
+</div>
+<p>Keep the &#8216;secret&#8217; and the &#8216;ID&#8217; safe.
+You have now succesfully created an application!</p>
+<p>Now you want to make the bot itself.
+Run this via CMD or Terminal:</p>
+<div class="highlight-Bash"><div class="highlight"><pre><span></span>    curl -H &#39;Authorization: [YOUR TOKEN]&#39; \
+-H &quot;Content-Type: application/json&quot; \
+-X POST -d &#39;{&quot;token&quot;: &quot;[YOUR BOTS USERS TOKEN]&quot;}&#39; \
+https://discordapp.com/api/oauth2/applications/[Your Application&#39;s ID]/bot
+</pre></div>
+</div>
+<p>You should get a response like this:</p>
+<div class="highlight-Bash"><div class="highlight"><pre><span></span><span class="o">{</span><span class="s2">&quot;username&quot;</span>: <span class="s2">&quot;Mewsick&quot;</span>, <span class="s2">&quot;bot&quot;</span>: true, <span class="s2">&quot;token&quot;</span>: <span class="s2">&quot;YOUR BOTS NEW TOKEN&quot;</span>, <span class="s2">&quot;avatar&quot;</span>: <span class="s2">&quot;338f4d9d97056ae22c4a3feab5f0da07&quot;</span>, <span class="s2">&quot;discriminator&quot;</span>: <span class="s2">&quot;1550&quot;</span>, <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;132254000253894656&quot;</span><span class="o">}</span>
+</pre></div>
+</div>
+<p>Keep your bots Token safe. You have no succesfully created a bot!
+You can now login with your Token.</p>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Install via Maven:</p>
+<p>Replace &#64;VERSION&#64; with the version number.
+It is highly recommended to use the latest version.
+Check the <a class="reference external" href="https://discord.gg/0SBTUU1wZTX5pYo1">Discord API Chat</a> for the latest version.</p>
+<div class="highlight-Maven"><div class="highlight"><pre><span></span>...
+&lt;repositories&gt;
+  ...
+  &lt;repository&gt;
+        &lt;id&gt;jitpack.io&lt;/id&gt;
+        &lt;url&gt;https://jitpack.io&lt;/url&gt;
+  &lt;/repository&gt;
+&lt;/repositories&gt;
+...
+&lt;dependencies&gt;
+  ...
+  &lt;dependency&gt;
+        &lt;groupId&gt;com.github.austinv11&lt;/groupId&gt;
+        &lt;artifactId&gt;Discord4j&lt;/artifactId&gt;
+        &lt;version&gt;@VERSION@&lt;/version&gt;
+   &lt;!-- &lt;classifier&gt;shaded&lt;/classifier&gt; &lt;!-- Include this line if you want a shaded jar (all the Discord4J dependencies bundled into one jar)--&gt;
+  &lt;/dependency&gt;
+&lt;/dependencies&gt;
+...
+</pre></div>
+</div>
+<p>Install via Gradle:</p>
+<p>Replace &#64;VERSION&#64; with the version number.
+It is highly recommended to use the latest version.
+Check the <a class="reference external" href="https://discord.gg/0SBTUU1wZTX5pYo1">Discord API Chat</a> for the latest version.</p>
+<div class="highlight-Gradle"><div class="highlight"><pre><span></span>...
+repositories {
+  ...
+  maven {
+        url  &quot;https://jitpack.io&quot;
+  }
+}
+...
+dependencies {
+  ...
+  compile &quot;com.github.austinv11:Discord4j:@VERSION@&quot;
+  //compile &quot;com.github.austinv11:Discord4j:@VERSION@:shaded&quot; //Use this line instead of the one above it if you want a shaded jar (all the Discord4J dependencies bundled into one jar)
+}
+...
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Discord4J" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Discord4J.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

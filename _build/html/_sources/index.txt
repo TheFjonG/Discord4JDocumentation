@@ -1,7 +1,3 @@
-.. Discord4J documentation master file, created by
-   sphinx-quickstart on Wed Apr  6 02:46:20 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
 Discord4J
 =========
@@ -11,9 +7,9 @@ Discord4J is an unofficial Java library that helps you access `Discord's`_ API t
 Discord4J makes it easy for you to write a bot. It nearly has full api support.
 (See `Discord API Comparison`_)
 
-Feel free to join us in the `Discord API chat`_.
 
-You can find the source code on `Github`_
+The sourcecode can be found on `Github`_.
+Feel free to join us in the `Discord API chat`_.
 
 .. _Discord's: https://discordapp.com
 .. _Discord API chat: https://discord.gg/0SBTUU1wZTX5pYo1
@@ -35,14 +31,13 @@ This Documentation is still under development. If this site cant help you, pleas
 .. _Discord4J's Github page: http://austinv11.github.io/Discord4J/
 .. _Issue Tracker: https://github.com/austinv11/Discord4J/issues
 
+Documentation
+==============
+
 .. toctree::
-   :caption: Documentation
    :maxdepth: 2
 
    getting_started
-   features/logging
-   features/management
-   features/permissions
-   features/commands
-   features/voice
-   features/events
+
+
+
