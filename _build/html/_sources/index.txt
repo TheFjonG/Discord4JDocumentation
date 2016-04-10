@@ -36,8 +36,8 @@ This Documentation is still under development. If this site cant help you, pleas
    :caption: Documentation
    :maxdepth: 2
 
-   getting_started
-   logging_in
-
+   pages/getting_started
+   pages/logging_in
+   pages/events
 
 

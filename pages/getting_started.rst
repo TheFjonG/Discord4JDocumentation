@@ -143,5 +143,4 @@ Check the `Discord API Chat`_ for the latest version.
 	...
 
 
-
 .. _Discord API Chat: https://discord.gg/0SBTUU1wZTX5pYo1
