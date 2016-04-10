@@ -1,41 +1,59 @@
 Getting Started
 ===============
 
+If you have any problems with this guide, please contact @Thefjong in `Discord API Chat`_ in the Discord4J channel.
+
 Requirements
 ------------
 
 Discord4J requires you to have a registered Account or a bot account.
 You can `register an account here`_.
 
+Discord4J requires `Java`_ and `Java JDK`_ aswell.
+
+`Git`_ & a Java IDE is optional but is recommended. `Eclipse`_ and `Intellij IDEA`_ are both excellent Java IDES.
+
 It is highly recommended that you make a bot account for your application.
 
 .. _register an account here: https://discordapp.com/register
-
+.. _Java: http://www.java.com/en/
+.. _Java JDK: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+.. _Git: https://git-scm.com/
+.. _Eclipse: https://www.eclipse.org/downloads/
+.. _Intellij IDEA: https://www.jetbrains.com/idea/
 Making a bot account
 --------------------
 
+You can either get a bot account via CURL or via `Discord API Website`_.
+If youre going with Discord's bot maker, then make an Application, then add the bot account afterwards. ;)
+
+Otherwise, you can follow this CURL tutorial:
+
 * Install Curl from `Curl's website`_
 
-* You will need 2 accounts. 1 Main Account & 1 Bot Account.
+There are 2 ways of getting a bot account.
 
-"YOUR.." Is your Main account's information.
-"YOUR BOTS..." Is your Bot's Information.
+* The 1. way first you'll need 2 account registred at Discord. Your main and your bot account.
+* The 2. way you'll only need 1 account registered at Discord. Your main account only
 
-Now you want to make an application.
-Run this via CMD or Terminal:
+If youre going with the second way: [A NAME FOR YOUR APPLICATION] will be the name of the bot.
+
+Let's begin by making an application.
+
+Run this via CMD or Terminal or go here:`Make an Application`_:
 
 .. code-block:: Bash
 
 	curl -H 'Authorization: [YOUR TOKEN]' \
 	-H "Content-Type: application/json" \
-	-X POST -d '{"name": "[YOUR BOTS USERS TOKEN]"}' \
+	-X POST -d '{"name": "[A NAME FOR YOUR APPLICATION]"}' \
 	https://discordapp.com/api/oauth2/applications
 
 You should get a response like this:
 
 .. code-block:: Bash
 
-	{"secret": "XXX", "redirect_uris": [], "description": "", "name": "YOUR BOTS NAME HERE", "id": "YYY", "icon": null}
+	{"secret": "XXX", "redirect_uris": [], "description": "", "name": "THE NAME OF THE APPLICATION", "id": "YYY", "icon": null}
 	
 Keep the 'secret' and the 'ID' safe.
 You have now succesfully created an application!
@@ -47,7 +65,7 @@ Run this via CMD or Terminal:
 
 	curl -H 'Authorization: [YOUR TOKEN]' \
     -H "Content-Type: application/json" \
-    -X POST -d '{"token": "[YOUR BOTS USERS TOKEN]"}' \
+    -X POST -d '{"token": "[YOUR BOTS USERS TOKEN] <- ( LEAVE EMPTY IF YOUR GOING WITH THE SECOND WAY )"}' \
     https://discordapp.com/api/oauth2/applications/[Your Application's ID]/bot
 
 You should get a response like this:
@@ -61,8 +79,7 @@ You can now login with your Token.
 
 
 .. _Curl's website: https://curl.haxx.se/download.html
-
-
+.. _`Discord API Website`: https://discordapp.com/developers/applications/me
 
 Installation
 ------------

@@ -31,13 +31,13 @@ This Documentation is still under development. If this site cant help you, pleas
 .. _Discord4J's Github page: http://austinv11.github.io/Discord4J/
 .. _Issue Tracker: https://github.com/austinv11/Discord4J/issues
 
-Documentation
-==============
 
 .. toctree::
+   :caption: Documentation
    :maxdepth: 2
 
    getting_started
+   logging_in
 
 
 
