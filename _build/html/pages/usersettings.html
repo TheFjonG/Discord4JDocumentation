@@ -31,6 +31,7 @@
 
   
     <link rel="top" title="Discord4J 1 documentation" href="../index.html"/>
+        <link rel="next" title="Channel" href="channel.html"/>
         <link rel="prev" title="Events" href="events.html"/> 
 
   
@@ -91,6 +92,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#changing-avatar">Changing Avatar</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="channel.html">Channel</a></li>
 </ul>
 
             
@@ -158,7 +160,7 @@
 </div>
 <div class="section" id="changing-avatar">
 <h2>Changing Avatar<a class="headerlink" href="#changing-avatar" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">changeBotAvatar</span><span class="o">(</span><span class="n">IDiscordClient</span> <span class="n">client</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">DiscordException</span><span class="o">,</span> <span class="n">HTTP429Exception</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">changeBotAvatar</span><span class="o">(</span><span class="n">IDiscordClient</span> <span class="n">client</span><span class="o">)</span>
 <span class="o">{</span>
     <span class="n">client</span><span class="o">.</span><span class="na">changeAvatar</span><span class="o">(</span><span class="n">Image</span><span class="o">.</span><span class="na">forFile</span><span class="o">(</span><span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">&quot;BotAvatar.png&quot;</span><span class="o">)));</span>
     <span class="n">client</span><span class="o">.</span><span class="na">changeAvatar</span><span class="o">(</span><span class="n">Image</span><span class="o">.</span><span class="na">forUrl</span><span class="o">(</span><span class="s">&quot;jpg&quot;</span><span class="o">,</span> <span class="s">&quot;Random.org/avatar.jpg&quot;</span><span class="o">));</span>
@@ -177,6 +179,8 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="channel.html" class="btn btn-neutral float-right" title="Channel" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="events.html" class="btn btn-neutral" title="Events" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>

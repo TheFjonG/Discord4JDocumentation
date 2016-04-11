@@ -1,0 +1,301 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Channel &mdash; Discord4J 1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Discord4J 1 documentation" href="../index.html"/>
+        <link rel="prev" title="User Settings" href="usersettings.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Discord4J
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="logging_in.html">Logging In</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events.html">Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usersettings.html">User Settings</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Channel</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-a-channel-by-id">Getting a channel by ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-an-invite">Creating an invite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#accepting-an-invite">Accepting an invite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deleting-an-invite">Deleting an invite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-messages-in-a-channel">Getting Messages in a channel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#toggling-typing-status">Toggling Typing Status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#changing-channel-name-position-topic">Changing Channel Name, Position &amp; Topic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sending-files-and-messages">Sending files and messages</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Discord4J</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Channel</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/pages/channel.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="channel">
+<h1>Channel<a class="headerlink" href="#channel" title="Permalink to this headline">¶</a></h1>
+<p>If you have any problems with this guide, please contact &#64;Thefjong in <a class="reference external" href="https://discord.gg/0SBTUU1wZTX5pYo1">Discord API Chat</a> in the Discord4J channel.</p>
+<div class="section" id="getting-a-channel-by-id">
+<h2>Getting a channel by ID<a class="headerlink" href="#getting-a-channel-by-id" title="Permalink to this headline">¶</a></h2>
+<p>First of all you might be wondering how to get the id from a channel. Do following:</p>
+<img alt="../_images/gettingidofchannel.png" src="../_images/gettingidofchannel.png" />
+<p>Afterwards, put the link in notepad or something. Then copy the id out of it, like I do here:</p>
+<img alt="../_images/gettingidofchannel1.png" src="../_images/gettingidofchannel1.png" />
+<p>Now we want to use it in our ultra amazing bot.</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">IChannel</span> <span class="nf">changeBotAvatar</span><span class="o">(</span><span class="n">IDiscordClient</span> <span class="n">client</span><span class="o">,</span> <span class="n">String</span> <span class="n">id</span><span class="o">)</span>
+<span class="o">{</span>
+    <span class="k">return</span> <span class="n">client</span><span class="o">.</span><span class="na">getChannelByID</span><span class="o">(</span><span class="n">id</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>That was quite easy.</p>
+<p>Let&#8217;s make something more out of that.</p>
+</div>
+<div class="section" id="creating-an-invite">
+<h2>Creating an invite<a class="headerlink" href="#creating-an-invite" title="Permalink to this headline">¶</a></h2>
+<p>1 parameter in create invite is how long the invite should last. 2. is how many users can use the invite. 3. is whether the invite is temporary. 4. is if the invite should be human-readable.</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">IInvite</span> <span class="nf">createInvite</span><span class="o">(</span><span class="n">IDiscordClient</span> <span class="n">client</span><span class="o">,</span> <span class="n">String</span> <span class="n">id</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">MissingPermissionsException</span><span class="o">,</span> <span class="n">HTTP429Exception</span><span class="o">,</span> <span class="n">DiscordException</span>
+<span class="o">{</span>
+    <span class="k">return</span> <span class="n">client</span><span class="o">.</span><span class="na">getChannelByID</span><span class="o">(</span><span class="n">id</span><span class="o">).</span><span class="na">createInvite</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="kc">false</span><span class="o">,</span> <span class="kc">false</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Now you have a invite for a channel. What about accepting one from a channel?</p>
+</div>
+<div class="section" id="accepting-an-invite">
+<h2>Accepting an invite<a class="headerlink" href="#accepting-an-invite" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">InviteResponse</span> <span class="nf">acceptInvite</span><span class="o">(</span><span class="n">IDiscordClient</span> <span class="n">client</span><span class="o">,</span> <span class="n">String</span> <span class="n">invite</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">DiscordException</span><span class="o">,</span> <span class="n">HTTP429Exception</span>
+<span class="o">{</span>
+    <span class="k">return</span> <span class="n">client</span><span class="o">.</span><span class="na">getInviteForCode</span><span class="o">(</span><span class="n">invite</span><span class="o">).</span><span class="na">accept</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Let&#8217;s amagine you just made a invite, but you realize you did something stupid. Let&#8217;s delete it :D</p>
+</div>
+<div class="section" id="deleting-an-invite">
+<h2>Deleting an invite<a class="headerlink" href="#deleting-an-invite" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">deleteInvite</span><span class="o">(</span><span class="n">IDiscordClient</span> <span class="n">client</span><span class="o">,</span> <span class="n">String</span> <span class="n">invite</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">HTTP429Exception</span><span class="o">,</span> <span class="n">DiscordException</span>
+<span class="o">{</span>
+    <span class="n">client</span><span class="o">.</span><span class="na">getInviteForCode</span><span class="o">(</span><span class="n">invite</span><span class="o">).</span><span class="na">delete</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Now you know exactly how to manage invites.</p>
+</div>
+<div class="section" id="getting-messages-in-a-channel">
+<h2>Getting Messages in a channel<a class="headerlink" href="#getting-messages-in-a-channel" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-java"><div class="highlight"><pre><span></span>    <span class="kd">public</span> <span class="n">MessageList</span> <span class="nf">getMessages</span><span class="o">(</span><span class="n">IDiscordClient</span> <span class="n">client</span><span class="o">,</span> <span class="n">String</span> <span class="n">ChannelID</span><span class="o">)</span>
+<span class="o">{</span>
+    <span class="k">return</span> <span class="n">client</span><span class="o">.</span><span class="na">getChannelByID</span><span class="o">(</span><span class="n">ChannelID</span><span class="o">).</span><span class="na">getMessages</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="toggling-typing-status">
+<h2>Toggling Typing Status<a class="headerlink" href="#toggling-typing-status" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-java"><div class="highlight"><pre><span></span>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">toggleTypingStatus</span><span class="o">(</span><span class="n">IDiscordClient</span> <span class="n">client</span><span class="o">,</span> <span class="n">String</span> <span class="n">ChannelID</span><span class="o">)</span>
+<span class="o">{</span>
+    <span class="n">client</span><span class="o">.</span><span class="na">getChannelByID</span><span class="o">(</span><span class="n">ChannelID</span><span class="o">).</span><span class="na">toggleTypingStatus</span><span class="o">();</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="changing-channel-name-position-topic">
+<h2>Changing Channel Name, Position &amp; Topic<a class="headerlink" href="#changing-channel-name-position-topic" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">changeChannel</span><span class="o">(</span><span class="n">IDiscordClient</span> <span class="n">client</span><span class="o">,</span> <span class="n">String</span> <span class="n">ChannelID</span><span class="o">)</span>
+<span class="o">{</span>
+    <span class="n">client</span><span class="o">.</span><span class="na">getChannelByID</span><span class="o">(</span><span class="n">ChannelID</span><span class="o">).</span><span class="na">changeName</span><span class="o">(</span><span class="s">&quot;Bot chat&quot;</span><span class="o">);</span>
+    <span class="n">client</span><span class="o">.</span><span class="na">getChannelByID</span><span class="o">(</span><span class="n">ChannelID</span><span class="o">).</span><span class="na">changePosition</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+    <span class="n">client</span><span class="o">.</span><span class="na">getChannelByID</span><span class="o">(</span><span class="n">ChannelID</span><span class="o">).</span><span class="na">changeTopic</span><span class="o">(</span><span class="s">&quot;Bot chat, only for Awesome bots...&quot;</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sending-files-and-messages">
+<h2>Sending files and messages<a class="headerlink" href="#sending-files-and-messages" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">SendFileAndMessage</span><span class="o">(</span><span class="n">IDiscordClient</span> <span class="n">client</span><span class="o">,</span> <span class="n">String</span> <span class="n">ChannelID</span><span class="o">)</span>
+<span class="o">{</span>
+    <span class="n">client</span><span class="o">.</span><span class="na">getChannelByID</span><span class="o">(</span><span class="n">ChannelID</span><span class="o">).</span><span class="na">sendFile</span><span class="o">(</span><span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">&quot;filetosend&quot;</span><span class="o">));</span>
+    <span class="n">client</span><span class="o">.</span><span class="na">getChannelByID</span><span class="o">(</span><span class="n">ChannelID</span><span class="o">).</span><span class="na">sendMessage</span><span class="o">(</span><span class="s">&quot;Heyo Everyone.. wut&quot;</span><span class="o">);</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="usersettings.html" class="btn btn-neutral" title="User Settings" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Discord4J.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

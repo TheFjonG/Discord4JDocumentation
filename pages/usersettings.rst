@@ -28,7 +28,7 @@ Changing Avatar
 
 .. code-block:: java
 
-    public void changeBotAvatar(IDiscordClient client) throws DiscordException, HTTP429Exception
+    public void changeBotAvatar(IDiscordClient client)
     {
         client.changeAvatar(Image.forFile(new File("BotAvatar.png")));
         client.changeAvatar(Image.forUrl("jpg", "Random.org/avatar.jpg"));

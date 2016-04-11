@@ -40,5 +40,6 @@ This Documentation is still under development. If this site cant help you, pleas
    pages/logging_in
    pages/events
    pages/usersettings
+   pages/channel
 
 
