@@ -39,5 +39,6 @@ This Documentation is still under development. If this site cant help you, pleas
    pages/getting_started
    pages/logging_in
    pages/events
+   pages/usersettings
 
 
