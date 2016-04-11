@@ -37,4 +37,7 @@ Changing Avatar
         client.changeAvatar(Image.forStream("png", **InputStreamObject**));
     }
 
+There's lots of methods more... These are just some examples. see `Javadocs`_ for more. 
+
 .. _Discord API Chat: https://discord.gg/0SBTUU1wZTX5pYo1
+.. _JavaDocs: http://austinv11.github.io/Discord4J/docs.html

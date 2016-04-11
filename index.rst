@@ -41,5 +41,6 @@ This Documentation is still under development. If this site cant help you, pleas
    pages/events
    pages/usersettings
    pages/channel
+   pages/user
 
 

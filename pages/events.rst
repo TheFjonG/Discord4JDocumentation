@@ -120,4 +120,4 @@ Full Example
 	}
 	
 .. _Discord API Chat: https://discord.gg/0SBTUU1wZTX5pYo1
-.. _JavaDocs: https://jitpack.io/com/github/austinv11/Discord4j/2.4.4/javadoc/sx/blah/discord/handle/impl/events/package-frame.html
+.. _JavaDocs: http://austinv11.github.io/Discord4J/docs.html
