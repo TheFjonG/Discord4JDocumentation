@@ -87,12 +87,14 @@
 <li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#making-a-bot-account">Making a bot account</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#logging-error">Logging Error?</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="logging_in.html">Logging In</a></li>
 <li class="toctree-l1"><a class="reference internal" href="events.html">Events</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usersettings.html">User Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="botsettings.html">Bot Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="channel.html">Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user.html">User</a></li>
 </ul>
 
             
@@ -193,6 +195,19 @@ You can now login with your Token.</p>
 </div>
 <div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Installation via Gradle and Maven are super recommended and is the easiest way to install Discord4J as a libary for your project.
+Gradle and Maven will install Discord4J and all Discord4J&#8217;s dependencies. Gradle and Maven downloads from the same host, same directory but isnt identical software wise.
+In addition, Gradle and Maven can build the project for you.</p>
+<p>In Gradle you have a build.gradle file that gives information about what dependencies you need and how the file should be build etc.</p>
+<p>In Maven you have a pom.xml file that gives the information. Scroll down and see the difference.</p>
+<p>Gradle and maven are preset with Maven repository host. You can add more host by getting the host url.</p>
+<p>Let&#8217;s take the url where Discord4J is hosted: <a class="reference external" href="https://jitpack.io">https://jitpack.io</a>, and let&#8217;s give it the name: jitpack.io.</p>
+<p>Now we have the host, we need the project to be downloaded by Gradle and Maven. We need the dependency&#8217;s groupId, artifactId, and a version.</p>
+<p>Let&#8217;s take Discord4J&#8217;s  information: com.github.austinv11, Discord4j, and version 2.4.4 .</p>
+<p>When we give that information to Gradle/Maven it tells them to download dependencies from the directory and puts them in your Window&#8217;s User folder. ex: C:/Users/FjongyBoy/.gradle/.
+This is amazing. If you&#8217;re working on more than one bot, theyre using the same Dependency, which mean two different dependency jars isn&#8217;t on your disk. This saves space.</p>
+<p>For more information about Maven: <a class="reference external" href="https://maven.apache.org/guides/getting-started/">Maven Getting Started Guide</a></p>
+<p>For more information about Gradle: <a class="reference external" href="http://gradle.org/getting-started-gradle-java/">Gradle Getting Started Guide</a></p>
 <p>Install via Maven:</p>
 <p>Replace &#64;VERSION&#64; with the version number.
 It is highly recommended to use the latest version.
@@ -234,6 +249,35 @@ dependencies {
   ...
   compile &quot;com.github.austinv11:Discord4j:@VERSION@&quot;
   //compile &quot;com.github.austinv11:Discord4j:@VERSION@:shaded&quot; //Use this line instead of the one above it if you want a shaded jar (all the Discord4J dependencies bundled into one jar)
+}
+...
+</pre></div>
+</div>
+</div>
+<div class="section" id="logging-error">
+<h2>Logging Error?<a class="headerlink" href="#logging-error" title="Permalink to this headline">¶</a></h2>
+<p>When running the project, you&#8217;ll see that you need a file, in console. You need a Slf4 logger.
+This means that you can specify what logger you want to use.</p>
+<p>If you have no idea what logger to use, and you really dont care. You can use the Slf4j-simple logger.</p>
+<p>Gradle and Maven are preset with the Maven repository which means that you dont need to specify a url.</p>
+<p>Get it via Gradle or Maven:</p>
+<p>Maven:</p>
+<div class="highlight-Maven"><div class="highlight"><pre><span></span>&lt;dependencies&gt;
+  ...
+  &lt;dependency&gt;
+        &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+        &lt;artifactId&gt;slf4j-simple&lt;/artifactId&gt;
+        &lt;version&gt;1.7.9&lt;/version&gt;
+  &lt;/dependency&gt;
+&lt;/dependencies&gt;
+...
+</pre></div>
+</div>
+<p>Gradle:</p>
+<div class="highlight-Gradle"><div class="highlight"><pre><span></span>...
+dependencies {
+  ...
+  compile &quot;org.slf4j:slf4j-simple:1.7.9&quot;
 }
 ...
 </pre></div>

@@ -84,6 +84,29 @@ You can now login with your Token.
 Installation
 ------------
 
+Installation via Gradle and Maven are super recommended and is the easiest way to install Discord4J as a libary for your project.
+Gradle and Maven will install Discord4J and all Discord4J's dependencies. Gradle and Maven downloads from the same host, same directory but isnt identical software wise.
+In addition, Gradle and Maven can build the project for you.
+
+In Gradle you have a build.gradle file that gives information about what dependencies you need and how the file should be build etc.
+
+In Maven you have a pom.xml file that gives the information. Scroll down and see the difference.
+
+Gradle and maven are preset with Maven repository host. You can add more host by getting the host url.
+
+Let's take the url where Discord4J is hosted: https://jitpack.io, and let's give it the name: jitpack.io.
+
+Now we have the host, we need the project to be downloaded by Gradle and Maven. We need the dependency's groupId, artifactId, and a version.
+
+Let's take Discord4J's  information: com.github.austinv11, Discord4j, and version 2.4.4 .
+
+When we give that information to Gradle/Maven it tells them to download dependencies from the directory and puts them in your Window's User folder. ex: C:/Users/FjongyBoy/.gradle/.
+This is amazing. If you're working on more than one bot, theyre using the same Dependency, which mean two different dependency jars isn't on your disk. This saves space.
+
+For more information about Maven: `Maven Getting Started Guide`_
+
+For more information about Gradle: `Gradle Getting Started Guide`_
+
 Install via Maven:
 
 
@@ -143,4 +166,45 @@ Check the `Discord API Chat`_ for the latest version.
 	...
 
 
+Logging Error?
+------------
+
+When running the project, you'll see that you need a file, in console. You need a Slf4 logger. 
+This means that you can specify what logger you want to use.
+
+If you have no idea what logger to use, and you really dont care. You can use the Slf4j-simple logger.
+
+
+Gradle and Maven are preset with the Maven repository which means that you dont need to specify a url.
+
+Get it via Gradle or Maven:
+
+
+Maven:
+
+.. code-block:: Maven
+
+	<dependencies>
+	  ...
+	  <dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-simple</artifactId>
+		<version>1.7.9</version>
+	  </dependency>
+	</dependencies>
+	...
+
+Gradle:
+
+.. code-block:: Gradle
+
+	...
+	dependencies {
+	  ...
+	  compile "org.slf4j:slf4j-simple:1.7.9"
+	}
+	...
+
 .. _Discord API Chat: https://discord.gg/0SBTUU1wZTX5pYo1
+.. _Maven Getting Started Guide: https://maven.apache.org/guides/getting-started/
+.. _Gradle Getting Started Guide: http://gradle.org/getting-started-gradle-java/
