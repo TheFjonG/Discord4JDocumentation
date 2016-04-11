@@ -1,4 +1,4 @@
-Channel
+User
 ===============
 
 If you have any problems with this guide, please contact @Thefjong in `Discord API Chat`_ in the Discord4J channel.
