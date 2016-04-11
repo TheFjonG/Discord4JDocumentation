@@ -172,7 +172,7 @@ Logging Error?
 When running the project, you'll see that you need a file, in console. You need a Slf4 logger. 
 This means that you can specify what logger you want to use.
 
-If you have no idea what logger to use, and you really dont care. You can use the Slf4j-simple logger.
+If you have now idea what logger to use, and you really dont care. You can use the Slf4j-simple logger.
 
 
 Gradle and Maven are preset with the Maven repository which means that you dont need to specify a url.
