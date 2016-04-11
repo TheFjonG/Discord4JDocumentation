@@ -147,6 +147,8 @@ Replace @VERSION@ with the version number.
 It is highly recommended to use the latest version.
 Check the `Discord API Chat`_ for the latest version.
 
+IMPORTANT: Gradle comes with mavenCentral as default in the repositories thingy.. Change that to jcenter()!
+
 
 .. code-block:: Gradle
 
