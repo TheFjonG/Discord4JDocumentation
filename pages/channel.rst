@@ -27,47 +27,6 @@ Now we want to use it in our ultra amazing bot.
 
 That was quite easy.
 
-Let's make something more out of that.
-
-Creating an invite
-------------------
-
-1 parameter in create invite is how long the invite should last. 2. is how many users can use the invite. 3. is whether the invite is temporary. 4. is if the invite should be human-readable. 
-
-.. code-block:: java
-	
-
-    public IInvite createInvite(IDiscordClient client, String id) throws MissingPermissionsException, HTTP429Exception, DiscordException
-    {
-        return client.getChannelByID(id).createInvite(0, 0, false, false);
-    }
-
-Now you have a invite for a channel. What about accepting one from a channel?
-
-Accepting an invite
--------------------
-
-.. code-block:: java
-
-    public InviteResponse acceptInvite(IDiscordClient client, String invite) throws DiscordException, HTTP429Exception
-    {
-        return client.getInviteForCode(invite).accept();
-    }
-
-Let's amagine you just made a invite, but you realize you did something stupid. Let's delete it :D
-
-Deleting an invite
--------------------
-
-.. code-block:: java
-
-    public void deleteInvite(IDiscordClient client, String invite) throws HTTP429Exception, DiscordException
-    {
-        client.getInviteForCode(invite).delete();
-    }
-
-Now you know exactly how to manage invites. 
-
 Getting Messages in a channel
 ------------------------------
 
