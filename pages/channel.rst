@@ -3,7 +3,7 @@ Channel
 
 If you have any problems with this guide, please contact @Thefjong in `Discord API Chat`_ in the Discord4J channel.
 
-Getting a channel by ID
+Getting a Channel by ID
 -------------------------
 
 First of all you might be wondering how to get the id from a channel. Do following:
@@ -18,10 +18,10 @@ Afterwards, put the link in notepad or something. Then copy the id out of it, li
 Or you can type out the channel with the hashtag syntax (i.e. #general) an add a backslash in front (like this: \\#general). Sending the message should get you the channel id in the form "<#CHANNEL_ID>".
 
 
-Now we want to use it in our ultra amazing bot. 
+Now we want to use it in our ultra amazing bot.
 
 .. code-block:: java
-	
+
     public IChannel getChannelForID(IDiscordClient client, String id)
     {
         return client.getChannelByID(id);
@@ -29,7 +29,7 @@ Now we want to use it in our ultra amazing bot.
 
 That was quite easy.
 
-Getting Messages in a channel
+Getting Messages in a Channel
 ------------------------------
 
 .. code-block:: java
@@ -42,7 +42,7 @@ Getting Messages in a channel
 Toggling Typing Status
 -----------------------
 
-.. code-block:: java 
+.. code-block:: java
 
 	public void toggleTypingStatus(IDiscordClient client, String ChannelID)
     {
@@ -62,7 +62,7 @@ Changing Channel Name, Position & Topic
     }
 
 
-Sending files and messages
+Sending Files and Messages
 ---------------------------
 
 .. code-block:: java
@@ -73,8 +73,7 @@ Sending files and messages
         client.getChannelByID(ChannelID).sendMessage("Heyo Everyone.. wut");
     }
 
-There's lots of methods more... These are just some examples. see `Javadocs`_ for more. 
+There's lots of methods more... These are just some examples. see `Javadocs`_ for more.
 
 .. _Discord API Chat: https://discord.gg/0SBTUU1wZTX5pYo1
 .. _JavaDocs: http://austinv11.github.io/Discord4J/docs.html
-

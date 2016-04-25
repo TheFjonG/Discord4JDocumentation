@@ -7,17 +7,28 @@ Updating Presence / Game information
 ------------
 
 .. code-block:: java
-	
+
     public void updateBotPresence(IDiscordClient client)
     {
         client.updatePresence(false, Optional.of("Bot things :3"));
     }
-	
-Changing Username
+
+
+Getting Presence / Game Playing
+-------------------------
+
+.. code-block:: java
+
+    public Presences getPresence(IDiscordClient client, String userID)
+    {
+        client.getUserByID(userID).getPresence();
+    }
+
+Changing Your Username
 ------------
 
 .. code-block:: java
-	
+
     public void changeBotUsername(IDiscordClient client) throws DiscordException, HTTP429Exception
     {
         client.changeUsername("Butt bot");
@@ -37,7 +48,7 @@ Changing Avatar
         client.changeAvatar(Image.forStream("png", **InputStreamObject**));
     }
 
-There's lots of methods more... These are just some examples. see `Javadocs`_ for more. 
+Don't believe that this is all you're limited to! Our `Java Docs`_ feature a bunch of nifty stuff.
 
 .. _Discord API Chat: https://discord.gg/0SBTUU1wZTX5pYo1
-.. _JavaDocs: http://austinv11.github.io/Discord4J/docs.html
+.. _Java Docs: http://austinv11.github.io/Discord4J/docs.html

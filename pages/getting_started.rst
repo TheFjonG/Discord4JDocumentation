@@ -54,7 +54,7 @@ You should get a response like this:
 .. code-block:: Bash
 
 	{"secret": "XXX", "redirect_uris": [], "description": "", "name": "THE NAME OF THE APPLICATION", "id": "YYY", "icon": null}
-	
+
 Keep the 'secret' and the 'ID' safe.
 You have now succesfully created an application!
 
@@ -71,9 +71,9 @@ Run this via CMD or Terminal:
 You should get a response like this:
 
 .. code-block:: Bash
-	
+
 	{"username": "Mewsick", "bot": true, "token": "YOUR BOTS NEW TOKEN", "avatar": "338f4d9d97056ae22c4a3feab5f0da07", "discriminator": "1550", "id": "132254000253894656"}
-	
+
 Keep your bots Token safe. You have now succesfully created a bot!
 You can now login with your Token.
 
@@ -171,7 +171,7 @@ IMPORTANT: Gradle comes with mavenCentral as default in the repositories thingy.
 Logging Error?
 ------------
 
-When running the project, you'll see that you need a file, in console. You need a Slf4 logger. 
+When running the project, you'll see that you need a file, in console. You need a Slf4 logger.
 This means that you can specify what logger you want to use.
 
 If you have now idea what logger to use, and you really dont care. You can use the Slf4j-simple logger.

@@ -14,7 +14,7 @@ You can either make an EventHandler that listens so all events that your class h
 See following code:
 
 .. code-block:: java
-	
+
 	public static void main(String[] args) throws Exception
 	{
 		if(args.length < 1)
@@ -24,7 +24,7 @@ See following code:
 		discordClient.getDispatcher().registerListener(new EventHandler());
 		discordClient.getDispatcher().registerListener(new ReadyEventListener());
 	}
-	
+
 The line that has (new EventHandler()) registers a listener that works by making methods that has an @EventSubscriber annotation.
 
 The line that has (new ReadyEventListener()) registers a listeners that implements IListener. This file will only react when one specific event is dispatched.
@@ -62,8 +62,8 @@ The ReadyEventListener class:
 			doSomething();
 		}
 	}
-	
-	
+
+
 The EventHandler class listens on 2 events. Both ReadyEvent and MessageReceivedEvent.
 The class will print "The Bot is now ready" in the console when the ReadyEvent is dispatched.
 The class will also print the a message with a name when the bot has received a message.
@@ -78,7 +78,7 @@ Full Example
 
 
 .. code-block:: java
-	
+
 	public static void main(String[] args) throws Exception
 	{
 		if(args.length < 1)
@@ -88,7 +88,7 @@ Full Example
 		discordClient.getDispatcher().registerListener(new EventHandler());
 		discordClient.getDispatcher().registerListener(new ReadyEventListener());
 	}
-	
+
 .. code-block:: java
 
 	public class EventHandler
@@ -106,7 +106,7 @@ Full Example
 			System.out.println(event.getMessage().getAuthor().getName() + ": " + event.getMessage().getContent());
 		}
 	}
-	
+
 .. code-block:: java
 
 	public class ReadyEventListener implements IListener<ReadyEvent>
@@ -118,6 +118,6 @@ Full Example
 			doSomething();
 		}
 	}
-	
+
 .. _Discord API Chat: https://discord.gg/0SBTUU1wZTX5pYo1
 .. _JavaDocs: http://austinv11.github.io/Discord4J/docs.html
