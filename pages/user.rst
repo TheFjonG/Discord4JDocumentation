@@ -3,6 +3,23 @@ User
 
 If you have any problems with this guide, please contact @Thefjong in `Discord API Chat`_ in the Discord4J channel.
 
+Getting a user by ID
+-------------------------
+
+You can type out the user with the @mention syntax (i.e. @Austin) an add a backslash in front (like this: \\@Austin). Sending the message should get you the user id in the form "<@USER_ID>". NOTE: This will still mention the user!
+
+
+Now we want to use it in our ultra amazing bot. 
+
+.. code-block:: java
+	
+    public IUser getUserForID(IDiscordClient client, String id)
+    {
+        return client.getUserByID(id);
+    }
+
+That was quite easy.
+
 Getting user presence / game playing
 -------------------------
 

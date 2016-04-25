@@ -25,16 +25,16 @@ Making a bot account
 --------------------
 
 You can either get a bot account via CURL or via `Discord API Website`_.
-If youre going with Discord's bot maker, then make an Application, then add the bot account afterwards. ;)
+If you're going with Discord's bot maker, then make an Application, then add the bot account afterwards. ;)
 
 Otherwise, you can follow this CURL tutorial:
 
 * Install Curl from `Curl's website`_
 
-There are 2 ways of getting a bot account.
+There are 2 ways of getting a bot account:
 
-* The 1. way first you'll need 2 account registred at Discord. Your main and your bot account.
-* The 2. way you'll only need 1 account registered at Discord. Your main account only
+1. First you'll need 2 account registred at Discord. Your main and your bot account.
+2. You'll only need 1 account registered at Discord. Your main account only.
 
 If youre going with the second way: [A NAME FOR YOUR APPLICATION] will be the name of the bot.
 

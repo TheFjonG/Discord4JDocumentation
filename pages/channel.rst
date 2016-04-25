@@ -15,12 +15,14 @@ Afterwards, put the link in notepad or something. Then copy the id out of it, li
 
 .. image:: ../images/gettingidofchannel1.png
 
+Or you can type out the channel with the hashtag syntax (i.e. #general) an add a backslash in front (like this: \\#general). Sending the message should get you the channel id in the form "<#CHANNEL_ID>".
+
 
 Now we want to use it in our ultra amazing bot. 
 
 .. code-block:: java
 	
-    public IChannel changeBotAvatar(IDiscordClient client, String id)
+    public IChannel getChannelForID(IDiscordClient client, String id)
     {
         return client.getChannelByID(id);
     }
