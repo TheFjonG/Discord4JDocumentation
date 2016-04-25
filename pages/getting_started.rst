@@ -74,7 +74,7 @@ You should get a response like this:
 	
 	{"username": "Mewsick", "bot": true, "token": "YOUR BOTS NEW TOKEN", "avatar": "338f4d9d97056ae22c4a3feab5f0da07", "discriminator": "1550", "id": "132254000253894656"}
 	
-Keep your bots Token safe. You have no succesfully created a bot!
+Keep your bots Token safe. You have now succesfully created a bot!
 You can now login with your Token.
 
 
