@@ -1,4 +1,7 @@
 # Discord4J Documentation
+
+[![Documentation Status](https://readthedocs.org/projects/discord4j/badge/?version=latest)](http://discord4j.readthedocs.org/en/latest/?badge=latest)
+
 Source for the documentation informing developers 
 on the use of Discord4J (A Discord API wrapper written for Java).
 If the docs are just a bit too overwhelming, or not covering
