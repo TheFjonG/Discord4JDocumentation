@@ -19,6 +19,7 @@ See following code:
 	{
 		if(args.length < 1)
 			System.out.print("You need to specify a token before continuing");
+
 		discordClient = getClient(args[0]);
 
 		discordClient.getDispatcher().registerListener(new EventHandler());
@@ -55,7 +56,6 @@ The ReadyEventListener class:
 
 	public class ReadyEventListener implements IListener<ReadyEvent>
 	{
-
 		public void handle(ReadyEvent event)
 		{
 			System.out.println("The bot is now ready");
@@ -83,6 +83,7 @@ Full Example
 	{
 		if(args.length < 1)
 			System.out.print("You need to specify a token before continuing");
+
 		discordClient = getClient(args[0]);
 
 		discordClient.getDispatcher().registerListener(new EventHandler());
@@ -111,7 +112,6 @@ Full Example
 
 	public class ReadyEventListener implements IListener<ReadyEvent>
 	{
-
 		public void handle(ReadyEvent event)
 		{
 			System.out.println("The bot is now ready");

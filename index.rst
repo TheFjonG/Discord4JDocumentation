@@ -43,3 +43,4 @@ This Documentation is still under development. If this site can't help you, plea
    pages/channel
    pages/user
    pages/audio
+   pages/nifty_examples
