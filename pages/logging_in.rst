@@ -12,12 +12,10 @@ Alright let's start with a clean Java app.
 
 	public class TestBot
 	{
-
 		public static void main(String[] args)
 		{
 
 		}
-
 	}
 
 Now you'll want to make a method that will return an `IDiscordClient`_ object. Extend your class with the getClient method & add a *throws Exception* to your main method's signature.
@@ -26,7 +24,6 @@ Now you'll want to make a method that will return an `IDiscordClient`_ object. E
 
 	public class TestBot
 	{
-
 		public static void main(String[] args) throws Exception
 		{
 
@@ -36,10 +33,9 @@ Now you'll want to make a method that will return an `IDiscordClient`_ object. E
 		{
 			return new ClientBuilder().withToken(token).login();
 		}
-
 	}
 
-This method will take a `bot token`_ as a parameter, and return an IDiscordClient. (Follow the link to grab your own token)
+This method will take a `bot token`_ as a parameter, and return an IDiscordClient. (The 'Getting Started' section outlines getting a token)
 
 Now you want to make a *public static* variable in your class, that you'll set to getClient(*YOUR TOKEN*). Your class should look similar to this:
 
@@ -47,7 +43,6 @@ Now you want to make a *public static* variable in your class, that you'll set t
 
 	public class TestBot
 	{
-
 		public static IDiscordClient discordClient;
 
 		public static void main(String[] args) throws Exception
@@ -62,7 +57,6 @@ Now you want to make a *public static* variable in your class, that you'll set t
 		{
 			return new ClientBuilder().withToken(token).login();
 		}
-
 	}
 
 This will take an argument and pass it to the getClient method. When you run your jar, remember to put a token as an argument!
@@ -79,7 +73,6 @@ Completed Example
 
 	public class TestBot
 	{
-
 		public static IDiscordClient discordClient;
 
 		public static void main(String[] args) throws Exception
@@ -94,7 +87,6 @@ Completed Example
 		{
 			return new ClientBuilder().withToken(token).login();
 		}
-
 	}
 
 .. _Discord API Chat: https://discord.gg/0SBTUU1wZTX5pYo1
