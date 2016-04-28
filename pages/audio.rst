@@ -4,7 +4,7 @@ Audio
 If you have any problems with this guide, please contact @Thefjong in `Discord API Chat`_ in the Discord4J channel.
 
 Grabbing a Channel
-===================
+--------------------------
 
 .. code-block:: java
 
@@ -14,11 +14,11 @@ Grabbing a Channel
     }
 
 Playing Audio Example
-======================
+--------------------------
 
 .. code-block:: java
 
-    public void playSong(AudioChannel channel, String path) throws Exception
+    public void playFile(AudioChannel channel, String path) throws Exception
     {
         if (channel == null)
            throw new NullPointerException("Argument: 'channel'");
@@ -39,7 +39,7 @@ Playing Audio Example
     }
 
 General Media Control
-==============
+--------------------------
 
 .. code-block:: java
 

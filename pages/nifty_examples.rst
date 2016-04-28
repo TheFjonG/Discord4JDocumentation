@@ -5,7 +5,7 @@ If you have any problems with this guide, please contact @Thefjong in `Discord A
 
 
 Command System
-=========================
+-----------------------
 
 Commands are an extremely common task handled by bots. One way to relieve the
 amount of effort put into every command is to develop a small system to emit events
@@ -57,7 +57,7 @@ Let's start by creating our listener to process messages, and search for command
      }
 
 
-Alright we have that done. Let's walk through what we just did.. 
+Alright we have that done. Let's walk through what we just did..
 * Someone sends your everyday casual message on a channel the bot was invited to
 * We listen for the event fired by Discord4J. How nice of them!
 * We grab that message from the event (_message)

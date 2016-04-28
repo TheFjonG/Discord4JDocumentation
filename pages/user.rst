@@ -41,7 +41,7 @@ Sending a Private Message
         channel.sendMessage("Hello User");
     }
 
-There's an overload of information at our `Java Docs`_. This is just a little piece of the awesomeness
+There's an overload of information at our `Java Docs`_. This is just a little slice of the awesomeness.
 
 .. _Discord API Chat: https://discord.gg/0SBTUU1wZTX5pYo1
 .. _Java Docs: https://austinv11.github.io/Discord4J/docs.html

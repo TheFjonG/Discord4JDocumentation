@@ -8,7 +8,7 @@ help you on the Discord API semi-official [server](https://discord.gg/0SBTUU1wZT
 If you do choose to do this (we won't bite you!) please keep in mind you should
 be seeking help within the channel titled 'java_discord4j'
 
-[Live Docs](https://discord4j.readthedocs.org) 
+[Live Docs](https://discord4j.readthedocs.io) 
 
 [Discord4J Repository](https://github.com/austinv11/Discord4J)
 

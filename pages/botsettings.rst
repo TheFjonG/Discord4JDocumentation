@@ -25,7 +25,7 @@ Getting Presence / Game Playing
     }
 
 Changing Your Username
-------------
+------------------------
 
 .. code-block:: java
 
